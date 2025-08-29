@@ -1,0 +1,22 @@
+{
+  "name": "Faceblook",
+  "description": "Facebook feature blocker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://www.facebook.com/*",
+        "https://www.facebook.com/watch/?ref=tab"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
